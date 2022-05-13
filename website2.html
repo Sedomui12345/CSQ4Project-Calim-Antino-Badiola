@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="html, css, javascript">
+  
+  <script defer src="script1.js"></script>
+  <title>Quiz App</title>
+  <style>
+    :root{
+      --bg: #F6F6F2;
+      --form: #6FB3B8;
+      --qstn: #BADFE7;
+      --choice: #C2EDCE;
+      --bottom: #388087;
+    }
+
+    body {
+      padding:0;
+      margin:12%;
+      justify-content:center;
+      align-items: center;
+      background-color: var(--bg);
+      font-family: Verdana;
+      color: black;
+      font-size: x-large;
+    }
+
+    #question {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px rgb(94, 94, 94) solid;
+      background-color: var(--qstn);
+      text-align: center;
+    }
+    .container{
+        padding: 10px;
+        margin: 0px;
+        background-color: var(--choice);     
+    }
+    
+    .form{
+      display:block;
+      border: 1px solid black;
+      display:grid;
+      grid-template-columns: repeat(2, auto);
+    } 
+    .ans{
+      font-size:20px;
+    }
+
+    .bottom{
+      background-color: var(--bottom);
+      height: 30px;
+      padding: 0px 10px;;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgb(94, 94, 94);
+    }
+    #prev-button{
+      display:flex;
+      float: right;
+    }
+    #next-button{
+      display:flex;
+      float: right;
+    }
+    .btn {
+      text-decoration: none;
+      height:25px;
+      font-size:20px;
+      display: inline;
+      align-items: center;
+      justify-content: center;
+    }
+    a{
+      font-size: 20px;
+      text-decoration: none;
+    } 
+  </style>
+</head>
+<body>
+  <div id="question">
+    <p>Question</p>
+  </div>
+
+  <form class="form">
+  <fieldset class="container">
+    <input type="radio" id="answer1" name="answer" value="Answer 1">
+    <label class="ans" for="answer1">Answer 1</label></br>
+  </fieldset>
+
+  <fieldset class="container">
+    <input type="radio" id="answer2" name="answer" value="Answer 2">
+    <label class="ans" for="answer2">Answer 2</label></br>
+  </fieldset>
+
+  <fieldset class="container">
+    <input type="radio" id="answer3" name="answer" value="Answer 3">
+    <label class="ans" for="answer3">Answer 3</label></br>
+  </fieldset>
+
+  <fieldset class="container">
+    <input type="radio" id="answer4" name="answer" value="Answer 4">
+    <label class="ans" for="answer4">Answer 4</label></br>
+  </fieldset>
+  </form>
+
+  <div class="bottom">
+  <button class="btn" onclick="checker()">Submit</button>
+  <button class="btn" id="next-button" onclick="next()"><a href="website3.html"> Next </a></button>
+  <button class="btn" id="prev-button" onclick="prev()"><a href="website1.html"> Previous </a></button>
+  </div>
+
+ </form>
+
+</body>
+</html>
